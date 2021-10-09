@@ -1,0 +1,1 @@
+export { findPrimitive } from './find-primitive'

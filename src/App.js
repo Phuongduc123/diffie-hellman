@@ -4,6 +4,9 @@ import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import BigNumber from "bignumber.js"
 
+// use this
+import { findPrimitive } from './helper';
+
 // p, g is generic public params\\
 
 const checkPrimeNumber = (number) => {
@@ -46,6 +49,7 @@ function App() {
 
   const submit = (value) => {
     const p = new BigNumber(value.p);
+    console.log(findPrimitive(p))
     const g = new BigNumber(value.g);
     const Xa = new BigNumber(value.Xa);
     const Xb = new BigNumber(value.Xb);
